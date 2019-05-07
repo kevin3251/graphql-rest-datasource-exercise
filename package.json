@@ -6,7 +6,9 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.3.2",
     "apollo-server": "^2.4.8",
+    "axios": "^0.18.0",
     "graphql": "^14.2.1",
+    "node-fetch": "^2.5.0",
     "ramda": "^0.26.1"
   },
   "devDependencies": {
