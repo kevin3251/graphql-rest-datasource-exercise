@@ -12,12 +12,10 @@ const registry = {
         return resp.data
     },
 
-    async getSearchResult({
-        text, size, from, quality, popularity, maintenance
-    } = {}) {
-        const url = `${this.baseURL}/text=${text}&size=${size}&from=${from}&quality=${quality}&popularity=${popularity}&maintenanc=${maintenance}`
-        let resp = await axios.get(url)
-        return resp.data
+    async getSearchResult(params) {
+        let url = `${this.baseURL}/-/v1/search`
+        let resp = await axios.get(url, { params })
+        return resp.data.objects
     }
 }
 

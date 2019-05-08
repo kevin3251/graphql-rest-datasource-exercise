@@ -20,10 +20,12 @@ exports.typeDef =  gql`
 
     type Author {
         name: String
+        email: String
+        url: String
     }
 
     type Package {
-        name: String,
+        name: String
         version: String
         author: Author
         description: String
@@ -36,10 +38,5 @@ exports.typeDef =  gql`
 `
 
 exports.resolvers = {
-    Package: {
-        author:() => {},
-        repository: () => {},
-        bugs: () => {},
-        contributors: () => {}
-    }
+    Package: {}
 }
